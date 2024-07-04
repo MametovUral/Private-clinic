@@ -77,6 +77,9 @@ module.exports = {
           palePink: "#DED6D5",
         },
       },
+      boxShadow: {
+        custom: "0px 0px 16px 0px rgba(230, 230, 230, 0.50)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

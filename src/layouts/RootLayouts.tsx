@@ -5,7 +5,9 @@ function RootLayouts() {
   return (
     <>
       <Navbar />
-      <Outlet />
+      <div className="pt-[160px] bg-[#F9FAFF]">
+        <Outlet />
+      </div>
     </>
   );
 }
