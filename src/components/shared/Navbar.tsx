@@ -5,11 +5,23 @@ function Navbar() {
   return (
     <nav>
       <div className="nav-head bg-custom-lightGray">
-        <ul className="flex gap-[51px] justify-center items-center">
+        <ul className="flex justify-center items-center">
           {navLinks.map((item) => (
-            <NavLink to={item.path} key={item.label}>
-              {item.label}
-            </NavLink>
+            <li
+              key={item.label}
+              className="flex items-center justify-center   font-manrope font-extralight text-[13px]"
+            >
+              <NavLink
+                className={({ isActive }) =>
+                  `${
+                    isActive ? "bg-custom-pureWhite " : ""
+                  } px-[26px] py-[6px] `
+                }
+                to={item.path}
+              >
+                {item.label}
+              </NavLink>
+            </li>
           ))}
         </ul>
       </div>
