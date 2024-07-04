@@ -4,9 +4,10 @@ import logo from "@/assets/logo.svg";
 import userLogo from "@/assets/user-logo.svg";
 import { Button } from "../ui/button";
 import { useCategoryState } from "@/stores/category.store";
+import { Path } from "@/types";
 
 function Navbar() {
-  const handleCategoryClick = (path: string) => {
+  const handleCategoryClick = (path: Path) => {
     const { setCategory } = useCategoryState.getState();
     setCategory(path);
   };

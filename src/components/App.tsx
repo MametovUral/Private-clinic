@@ -1,12 +1,11 @@
 import RootLayouts from "@/layouts/RootLayouts";
-import ChildrensH from "@/pages/ChildrensH";
-import Clinic from "@/pages/Clinic";
-import Cosmetology from "@/pages/Cosmetology";
-import Dentistry from "@/pages/Dentistry";
+import AboutCenter from "@/pages/AboutCenter";
+import Contacts from "@/pages/Contacts";
 import ErrorPage from "@/pages/ErrorPage";
-import Maternity from "@/pages/Maternity";
-import PlasticSurgery from "@/pages/PlasticSurgery";
-import Reproduction from "@/pages/Reproduction";
+import Prices from "@/pages/Prices";
+import Services from "@/pages/Services";
+import Specialists from "@/pages/Specialists";
+import Stock from "@/pages/Stock";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -15,13 +14,12 @@ const router = createBrowserRouter([
     element: <RootLayouts />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Clinic /> },
-      { path: "cosmetology", element: <Cosmetology /> },
-      { path: "maternity-hospital", element: <Maternity /> },
-      { path: "reproduction", element: <Reproduction /> },
-      { path: "dentistry", element: <Dentistry /> },
-      { path: "childrens-hospital", element: <ChildrensH /> },
-      { path: "plastic-surgery", element: <PlasticSurgery /> },
+      { index: true, element: <AboutCenter /> },
+      { path: "specialists", element: <Specialists /> },
+      { path: "services", element: <Services /> },
+      { path: "prices", element: <Prices /> },
+      { path: "stock", element: <Stock /> },
+      { path: "contacts", element: <Contacts /> },
     ],
   },
 ]);

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -74,4 +75,25 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+  width: 36px;
+  border-radius: 8px;
+  background-color: #9a888a;
+}
+
+.swiper-pagination {
+  position: absolute;
+  transform: translateY(-170%);
+
+  text-align: left;
 }
