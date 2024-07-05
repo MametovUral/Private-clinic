@@ -6,6 +6,11 @@ import pattern2 from "@/assets/pattern-2.svg";
 import pattern3 from "@/assets/pattern-3.svg";
 import pattern4 from "@/assets/pattern-4.svg";
 import pattern5 from "@/assets/pattern-5.svg";
+import clinic from "@/assets/imgs/clinic.png";
+import tecnoIcon from "@/assets/c-tech.svg";
+import eyesIcon from "@/assets/c-eyes.svg";
+import clockIcon from "@/assets/c-clock.svg";
+
 import { cosmeticTreatments, therapyList, treatments } from "@/constants";
 
 function AboutCenter() {
@@ -25,8 +30,8 @@ function AboutCenter() {
             Все услуги
           </Button>
         </div>
-        <div className="grid grid-flow-col gap-8">
-          <div className="row-span-4  service-card relative  p-[31px] rounded-3xl  shadow-custom bg-custom-softPink">
+        <div className="grid grid-flow-col gap-8 mb-14">
+          <div className="row-span-4 flex flex-col justify-center  service-card relative  p-[31px] rounded-3xl  shadow-custom bg-custom-softPink">
             <div className="service-card__head flex flex-col mb-7">
               <span className="font-cormorant mb-[-9px] italic font-semibold text-[28px] text-custom-slateGray">
                 Аппаратная 1
@@ -35,7 +40,7 @@ function AboutCenter() {
                 косметология
               </span>
             </div>
-            <div className="service-card__body">
+            <div className="service-card__body ">
               <ul>
                 {therapyList.map((item, index) => (
                   <li
@@ -130,6 +135,75 @@ function AboutCenter() {
           </div>
         </div>
       </div>
+      <div className="bg-custom-lightGray pt-[88px] pb-[157px] mb-[90px]">
+        <div className="container relative ">
+          <div className="flex justify-between items-center">
+            <div className="w-[40%]">
+              <h3 className="flex flex-col mb-[35px] font-cormorant leading-1 italic font-semibold text-[44px] text-custom-slateGray">
+                Центр косметологии
+                <span className="font-manrope leading-none not-italic font-semibold text-[32px] text-custom-slateGray">
+                  Клиники Екатерининская
+                </span>
+              </h3>
+              <p className="font-manrope mb-[42px]  last:mb-0 font-extralight text-custom-slateGray text-lg">
+                В косметологии Клиники Екатерининская работают только
+                врачи-дерматокосметологи и трихологи. Поэтому мы гарантируем
+                профессиональный подход и только самое качественное выполнение
+                услуг. К вашим услугам лазерная и инъекционная косметология,
+                аппаратные методики, профессиональный уход за кожей.
+              </p>
+              <Button size={"lg"}>О Центре</Button>
+            </div>
+            <div>
+              <img src={clinic} alt="clinic" />
+            </div>
+          </div>
+          <div className="flex gap-[22px] justify-between rounded-3xl absolute bottom-[-225px] w-full p-8 bg-custom-pureWhite">
+            <div className="flex gap-5 pr-3 w-max border-r-2">
+              <div>
+                <img src={tecnoIcon} alt="icon" />
+              </div>
+              <div className="">
+                <span className="font-manrope text-xl font-extralight text-custom-slateGray">
+                  Передовые технологии
+                </span>
+                <p className="font-manrope mt-[23px]  font-extralight text-base text-custom-slateGray">
+                  Используем только оригинальные сертифицированные аппараты и
+                  препараты
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-5 pr-3 w-max border-r-2">
+              <div>
+                <img src={eyesIcon} alt="icon" />
+              </div>
+              <div className="">
+                <span className="font-manrope text-xl font-extralight text-custom-slateGray">
+                  Сохраняем конфиденциальность
+                </span>
+                <p className="font-manrope  mt-[23px]  font-extralight text-base text-custom-slateGray">
+                  Бережно относимся к персональной информации пациентов
+                </p>
+              </div>
+            </div>
+            <div className="flex pr-3 gap-5 w-max">
+              <div>
+                <img src={clockIcon} alt="icon" />
+              </div>
+              <div className="">
+                <span className="font-manrope text-xl font-extralight text-custom-slateGray">
+                  Ценим ваше время
+                </span>
+                <p className="font-manrope  mt-[23px]  font-extralight text-base text-custom-slateGray">
+                  Персональный менеджер запишет на удобный день и ответит на
+                  вопросы
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>dfsfa</div>
     </>
   );
 }
