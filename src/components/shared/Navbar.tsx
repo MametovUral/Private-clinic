@@ -7,23 +7,20 @@ import { useCategoryState } from "@/stores/category.store";
 import { Path } from "@/types";
 
 function Navbar() {
+  const { categoryState, setCategory } = useCategoryState();
+
   const handleCategoryClick = (path: Path) => {
-    const { setCategory } = useCategoryState.getState();
     setCategory(path);
   };
 
-  const { categoryState } = useCategoryState();
-
-  console.log(categoryState);
-
   return (
-    <nav className="shadow-custom fixed inset-0 z-50 ">
+    <nav className="shadow-custom fixed h-max inset-0 z-50 ">
       <div className="nav-head bg-custom-lightGray">
         <ul className="flex justify-center items-center">
           {navLinks.map((item) => (
             <li
               key={item.label}
-              className="flex items-center justify-center cursor-pointer select-none font-manrope font-extralight text-[13px]"
+              className="flex transition-colors items-center justify-center cursor-pointer select-none font-manrope font-extralight text-[13px]"
             >
               <a
                 onClick={() => handleCategoryClick(item.path)}

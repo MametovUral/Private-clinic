@@ -16,3 +16,57 @@ export const linksNav = [
   { label: "Акции", path: "/stock" },
   { label: "Контакты", path: "/contacts" },
 ];
+
+export const caruselItems = [
+  {
+    id: 1,
+    title: "-50% на перманентный макияж",
+    subtitle: "Весь март",
+    titleBtn: "Весь март",
+  },
+  {
+    id: 2,
+    title: "-22% на перманентный макияж",
+    subtitle: "Весь март",
+    titleBtn: "Весь март",
+  },
+  {
+    id: 3,
+    title: "-5% на перманентный макияж",
+    subtitle: "Весь март",
+    titleBtn: "Весь март",
+  },
+  {
+    id: 4,
+    title: "-10% на перманентный макияж",
+    subtitle: "Весь март",
+    titleBtn: "Весь март",
+  },
+  {
+    id: 5,
+    title: "-30% на перманентный макияж",
+    subtitle: "Весь март",
+    titleBtn: "Весь март",
+  },
+];
+
+export const therapyList = [
+  "Альтера-терапия",
+  "Фототерапия BBL Hero",
+  "Гидропилинг HydraFacial MD",
+  "Лазерная шлифовка",
+  "Фракционный микроигольчатый RF-лифтинг",
+  "Микротоки Biogenie",
+];
+
+export const cosmeticTreatments = [
+  "Биоревитализация",
+  "Ботулинотерапия",
+  "Контурная пластика",
+];
+
+export const treatments = [
+  "Гигиеническая чистка",
+  "Перманентный макияж",
+  "Пилинги",
+];
