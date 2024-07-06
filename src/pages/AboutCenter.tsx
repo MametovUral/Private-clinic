@@ -12,7 +12,7 @@ import eyesIcon from "@/assets/c-eyes.svg";
 import clockIcon from "@/assets/c-clock.svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 import {
   cosmeticTreatments,
@@ -235,7 +235,11 @@ function AboutCenter() {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-            modules={[Navigation]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            modules={[Navigation, Autoplay]}
             className="mySwiper h-full"
           >
             {specialists.map((item) => (
