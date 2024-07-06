@@ -80,6 +80,10 @@ module.exports = {
       boxShadow: {
         custom: "0px 0px 16px 0px rgba(230, 230, 230, 0.50)",
       },
+      backgroundImage: {
+        "custom-radial":
+          "radial-gradient(70.71% 70.71% at 50% 50%, #F8ECE9 31.89%, #DED6D5 80%)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

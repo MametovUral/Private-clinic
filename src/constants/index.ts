@@ -1,3 +1,7 @@
+import specialist1 from "@/assets/specialists/c-specialist-1.png";
+import specialist2 from "@/assets/specialists/c-specialist-2.png";
+import specialist3 from "@/assets/specialists/c-specialist-3.png";
+
 export const navLinks = [
   { label: "Клиника", path: "/clinic" },
   { label: "Косметология", path: "/cosmetology" },
@@ -47,6 +51,29 @@ export const caruselItems = [
     title: "-30% на перманентный макияж",
     subtitle: "Весь март",
     titleBtn: "Весь март",
+  },
+];
+
+export const specialists = [
+  {
+    fullname: "Бондарь Мария Викторовна",
+    position: "Специалист по перманентному макияжу (дермапигментации)",
+    img: specialist1,
+  },
+  {
+    fullname: "Меджидов Саидат Мусаевна",
+    position: "Косметолог",
+    img: specialist2,
+  },
+  {
+    fullname: "Голубченко Марина Валерьевна",
+    position: "Дерматовенеролог",
+    img: specialist3,
+  },
+  {
+    fullname: "Голубченко Марина Валерьевна",
+    position: "Дерматовенеролог",
+    img: specialist3,
   },
 ];
 

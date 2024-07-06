@@ -11,7 +11,18 @@ import tecnoIcon from "@/assets/c-tech.svg";
 import eyesIcon from "@/assets/c-eyes.svg";
 import clockIcon from "@/assets/c-clock.svg";
 
-import { cosmeticTreatments, therapyList, treatments } from "@/constants";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
+import {
+  cosmeticTreatments,
+  specialists,
+  therapyList,
+  treatments,
+} from "@/constants";
+
+import "swiper/css";
+import "swiper/css/navigation";
 
 function AboutCenter() {
   return (
@@ -135,7 +146,7 @@ function AboutCenter() {
           </div>
         </div>
       </div>
-      <div className="bg-custom-lightGray pt-[88px] pb-[157px] mb-[90px]">
+      <div className="bg-custom-lightGray pt-[88px] pb-[157px] mb-[158px]">
         <div className="container relative ">
           <div className="flex justify-between items-center">
             <div className="w-[40%]">
@@ -203,7 +214,50 @@ function AboutCenter() {
           </div>
         </div>
       </div>
-      <div>dfsfa</div>
+      <div className="container">
+        <div className="flex justify-between items-center mb-[42px]">
+          <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
+            Наши специалисты
+          </h4>
+          <Button variant={"outline"} className=" text-custom-slateGray">
+            Все специалисты
+          </Button>
+        </div>
+        <div className="h-[445px] relative pb-8">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            modules={[Navigation]}
+            className="mySwiper h-full"
+          >
+            {specialists.map((item) => (
+              <SwiperSlide className="relative  flex items-end  rounded-3xl bg-custom-radial py-[38px] px-[32px]">
+                <div className="absolute flex justify-center  z-10 inset-0  ">
+                  <img className="w-max" src={item.img} alt="specialist" />
+                </div>
+                <div className="z-20">
+                  <h6 className="font-manrope mb-[12px] text-pretty text-[20px] font-semibold text-custom-slateGray">
+                    {item.fullname}
+                  </h6>
+                  <p className="font-manrope text-[18px] font-extralight text-custom-slateGray">
+                    {item.position}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="swiper-button-prev"></div>
+          <div className="swiper-button-next"></div>
+        </div>
+      </div>
     </>
   );
 }
