@@ -11,11 +11,15 @@ import tecnoIcon from "@/assets/c-tech.svg";
 import eyesIcon from "@/assets/c-eyes.svg";
 import clockIcon from "@/assets/c-clock.svg";
 
+import contactImg from "@/assets/imgs/c-contact-1.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Pagination } from "swiper/modules";
 
 import {
+  caruselItems,
   cosmeticTreatments,
+  grades,
   specialists,
   therapyList,
   treatments,
@@ -23,11 +27,13 @@ import {
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import AddCounsultation from "@/components/shared/AddCounsultation";
 
 function AboutCenter() {
   return (
     <>
-      <div className="bg-custom-palePink">
+      <div>
         <div className="container">
           <Carusel />
         </div>
@@ -214,7 +220,7 @@ function AboutCenter() {
           </div>
         </div>
       </div>
-      <div className="container">
+      <div className="container mb-14">
         <div className="flex justify-between items-center mb-[42px]">
           <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
             Наши специалисты
@@ -243,7 +249,10 @@ function AboutCenter() {
             className="mySwiper h-full"
           >
             {specialists.map((item) => (
-              <SwiperSlide className="relative  flex items-end  rounded-3xl bg-custom-radial py-[38px] px-[32px]">
+              <SwiperSlide
+                key={item.fullname}
+                className="relative  cursor-pointer flex items-end  rounded-3xl bg-custom-radial py-[38px] px-[32px]"
+              >
                 <div className="absolute flex justify-center  z-10 inset-0  ">
                   <img className="w-max" src={item.img} alt="specialist" />
                 </div>
@@ -260,6 +269,105 @@ function AboutCenter() {
           </Swiper>
           <div className="swiper-button-prev"></div>
           <div className="swiper-button-next"></div>
+        </div>
+      </div>
+      <div className="container mb-14">
+        <div className=" mb-[42px]">
+          <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
+            Рейтинги независимых сервисов
+          </h4>
+        </div>
+        <div>
+          <Swiper
+            slidesPerView={4}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper h-full"
+          >
+            {grades.map((item) => (
+              <SwiperSlide
+                key={item.grade}
+                className="rounded-3xl cursor-pointer flex items-center gap-[16px] h-[119px]  bg-custom-pureWhite py-[38px] px-[32px]"
+              >
+                <h4 className="font-manrope text-custom-dustyRose text-[40px]">
+                  {item.grade}
+                </h4>
+                <div>
+                  <p className="font-manrope text-custom-slateGray font-semibold text-lg ">
+                    {item.service}
+                  </p>
+                  <span className="font-manrope text-custom-slateGray font-extralight text-[13px]">
+                    {item.commment}
+                  </span>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+      <div className="container mb-14">
+        <AddCounsultation />
+      </div>
+      <div className="container mb-14 pb-11">
+        <div className=" mb-[42px]">
+          <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
+            Контакты
+          </h4>
+        </div>
+        <div className="flex gap-8 mb-14">
+          <div className="w-full">
+            <div className="rounded-3xl  shadow-custom bg-custom-softPink">
+              {/* <Swiper
+                pagination={{
+                  clickable: true,
+                }}
+                autoplay={{
+                  delay: 3000,
+                }}
+                modules={[Autoplay, Pagination]}
+                className="mySwiper  min-w-[539px]  "
+              >
+                {caruselItems.map((item) => (
+                  <SwiperSlide
+                    key={item.id}
+                    className="rounded-3xl bg-custom-palePink"
+                  >
+                    <div>
+                      <img className="w-full" src={contactImg} alt="img" />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper> */}
+            </div>
+          </div>
+          <div className="flex w-full flex-col gap-8">
+            <div className="p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
+              <div className="service-card__head flex flex-col mb-7">
+                <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
+                  косметология1
+                </span>
+              </div>
+            </div>
+            <div className="flex gap-8">
+              <div className="w-full p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
+                <div className="service-card__head flex flex-col mb-7">
+                  <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
+                    косметология2
+                  </span>
+                </div>
+              </div>
+              <div className=" w-full  p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
+                <div className="service-card__head flex flex-col mb-7">
+                  <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
+                    косметология3
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>

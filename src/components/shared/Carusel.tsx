@@ -24,14 +24,14 @@ export default function Carusel() {
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination]}
-        className="mySwiper z-40 "
+        className="mySwiper relative z-40 rounded-3xl "
       >
         {caruselItems.map((item) => (
           <SwiperSlide
             key={item.id}
-            className="flex justify-between bg-custom-palePink"
+            className="flex rounded-3xl justify-between bg-custom-palePink"
           >
-            <div className="flex flex-col justify-center w-[40%]">
+            <div className="flex flex-col pl-14 justify-center w-[40%]">
               <h1 className="text-custom-slateGray font-manrope font-semibold text-[40px] mb-8">
                 {item.title}
               </h1>

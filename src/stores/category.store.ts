@@ -1,5 +1,6 @@
-import { Path } from "@/types";
-import { create } from "zustand";
+import { create } from 'zustand';
+
+import { Path } from '@/types';
 
 interface ICategoryState {
   categoryState: Path;

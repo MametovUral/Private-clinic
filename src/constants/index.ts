@@ -53,7 +53,33 @@ export const caruselItems = [
     titleBtn: "Весь март",
   },
 ];
-
+export const grades = [
+  {
+    grade: 5.0,
+    service: "Яндекс",
+    commment: "498 отзыва",
+  },
+  {
+    grade: 4.8,
+    service: "2 GIS",
+    commment: "340 отзыва",
+  },
+  {
+    grade: 4.1,
+    service: "Сбер Здоровье",
+    commment: "80 отзыва",
+  },
+  {
+    grade: 4.9,
+    service: "ПроДокторов",
+    commment: "1169 отзыва",
+  },
+  {
+    grade: 5.5,
+    service: "Яндекс",
+    commment: "498 отзыва",
+  },
+];
 export const specialists = [
   {
     fullname: "Бондарь Мария Викторовна",
@@ -71,7 +97,7 @@ export const specialists = [
     img: specialist3,
   },
   {
-    fullname: "Голубченко Марина Валерьевна",
+    fullname: "Голубченко Марина Валерьевнаa",
     position: "Дерматовенеролог",
     img: specialist3,
   },

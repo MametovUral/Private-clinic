@@ -76,7 +76,14 @@
     @apply bg-background text-foreground;
   }
 }
+.react-tel-input .form-control {
+  padding-left: 10px; /* Kerakli oraliqni o'rnating */
+  width: max-content;
+}
 
+.flag-dropdown {
+  display: none;
+}
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -92,11 +99,13 @@
 }
 
 .swiper-pagination {
-  position: absolute;
-  transform: translateY(-170%);
-
+  height: 60px;
+  left: 100px;
   text-align: left;
+  transform: translateX(50px);
+  margin-right: 40px;
 }
+
 .swiper-container {
   position: relative;
 }

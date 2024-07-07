@@ -1,10 +1,12 @@
-import { linksNav, navLinks } from "@/constants";
 import { Link, NavLink } from "react-router-dom";
+
 import logo from "@/assets/logo.svg";
 import userLogo from "@/assets/user-logo.svg";
-import { Button } from "../ui/button";
+import { linksNav, navLinks } from "@/constants";
 import { useCategoryState } from "@/stores/category.store";
 import { Path } from "@/types";
+
+import { Button } from "../ui/button";
 
 function Navbar() {
   const { categoryState, setCategory } = useCategoryState();
