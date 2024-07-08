@@ -11,13 +11,10 @@ import tecnoIcon from "@/assets/c-tech.svg";
 import eyesIcon from "@/assets/c-eyes.svg";
 import clockIcon from "@/assets/c-clock.svg";
 
-import contactImg from "@/assets/imgs/c-contact-1.png";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay, Pagination } from "swiper/modules";
+import { Navigation, Autoplay} from "swiper/modules";
 
 import {
-  caruselItems,
   cosmeticTreatments,
   grades,
   specialists,
@@ -28,7 +25,9 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import AddCounsultation from "@/components/shared/AddCounsultation";
+import Contact from "@/components/shared/Contact";
 
 function AboutCenter() {
   return (
@@ -311,64 +310,8 @@ function AboutCenter() {
       <div className="container mb-14">
         <AddCounsultation />
       </div>
-      <div className="container mb-14 pb-11">
-        <div className=" mb-[42px]">
-          <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
-            Контакты
-          </h4>
-        </div>
-        <div className="flex gap-8 mb-14">
-          <div className="w-full">
-            <div className="rounded-3xl  shadow-custom bg-custom-softPink">
-              {/* <Swiper
-                pagination={{
-                  clickable: true,
-                }}
-                autoplay={{
-                  delay: 3000,
-                }}
-                modules={[Autoplay, Pagination]}
-                className="mySwiper  min-w-[539px]  "
-              >
-                {caruselItems.map((item) => (
-                  <SwiperSlide
-                    key={item.id}
-                    className="rounded-3xl bg-custom-palePink"
-                  >
-                    <div>
-                      <img className="w-full" src={contactImg} alt="img" />
-                    </div>
-                  </SwiperSlide>
-                ))}
-              </Swiper> */}
-            </div>
-          </div>
-          <div className="flex w-full flex-col gap-8">
-            <div className="p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
-              <div className="service-card__head flex flex-col mb-7">
-                <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
-                  косметология1
-                </span>
-              </div>
-            </div>
-            <div className="flex gap-8">
-              <div className="w-full p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
-                <div className="service-card__head flex flex-col mb-7">
-                  <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
-                    косметология2
-                  </span>
-                </div>
-              </div>
-              <div className=" w-full  p-[31px] rounded-3xl  shadow-custom bg-custom-pureWhite">
-                <div className="service-card__head flex flex-col mb-7">
-                  <span className="font-manrope  font-semibold text-[20px] text-custom-slateGray">
-                    косметология3
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container pb-11">
+        <Contact />
       </div>
     </>
   );

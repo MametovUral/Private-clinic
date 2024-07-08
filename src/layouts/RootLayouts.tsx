@@ -1,6 +1,7 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom";
 
-import Navbar from '@/components/shared/Navbar';
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 function RootLayouts() {
   return (
@@ -9,6 +10,7 @@ function RootLayouts() {
       <div className="pt-[160px] bg-[#F9FAFF]">
         <Outlet />
       </div>
+      <Footer />
     </>
   );
 }
