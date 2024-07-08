@@ -1,13 +1,5 @@
+import { Match } from "@/types";
 import { Link, useMatches } from "react-router-dom";
-
-interface Handle {
-  crumb?: (match: Match) => string;
-}
-
-interface Match {
-  pathname: string;
-  handle?: Handle;
-}
 
 function Breadcrumbs() {
   const matches = useMatches() as Match[];
