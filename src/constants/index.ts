@@ -13,7 +13,7 @@ export const navLinks = [
 ];
 
 export const linksNav = [
-  { label: "О центре", path: "/" },
+  { label: "О центре", path: "/about-center" },
   { label: "Специалисты", path: "/specialists" },
   { label: "Услуги", path: "/services" },
   { label: "Цены", path: "/prices" },

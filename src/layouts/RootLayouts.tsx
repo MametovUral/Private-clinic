@@ -2,14 +2,16 @@ import { Outlet } from "react-router-dom";
 
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import Breadcrumbs from "@/components/shared/Breadcrumbs";
 
 function RootLayouts() {
   return (
     <>
       <Navbar />
-      <div className="pt-[160px] bg-[#F9FAFF]">
+      <section className="pt-[160px] bg-[#F9FAFF]">
+        <Breadcrumbs />
         <Outlet />
-      </div>
+      </section>
       <Footer />
     </>
   );

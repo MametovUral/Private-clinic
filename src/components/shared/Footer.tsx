@@ -3,7 +3,7 @@ import eyesIcon from "@/assets/c-eyes-foter.svg";
 
 function Footer() {
   return (
-    <div className="bg-custom-slateGray">
+    <footer className="bg-custom-slateGray">
       <div className="container py-14">
         <div className="flex justify-between">
           <div className="w-[30%]">
@@ -35,7 +35,7 @@ function Footer() {
           </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
