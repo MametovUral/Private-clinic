@@ -1,4 +1,4 @@
-import { Outlet, useMatches } from "react-router-dom";
+import { Outlet, useMatches, useParams } from "react-router-dom";
 
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
@@ -7,7 +7,6 @@ import { Match } from "@/types";
 
 function RootLayouts() {
   const matches = useMatches() as Match[];
-
   return (
     <>
       <Navbar />

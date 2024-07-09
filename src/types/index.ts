@@ -5,5 +5,6 @@ export interface Handle {
 }
 export interface Match {
   pathname: string;
+  params: Record<string, string>;
   handle?: Handle;
 }

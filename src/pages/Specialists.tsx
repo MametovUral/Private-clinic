@@ -1,7 +1,10 @@
 import HeaderDescription from "@/components/shared/HeaderDescription";
 import { specialists } from "@/constants";
 import telIcon from "@/assets/c-phone.svg";
+import { useNavigate } from "react-router-dom";
 function Specialists() {
+  const navigate = useNavigate();
+
   return (
     <section className="container">
       <div className="mb-[81px]">
@@ -11,6 +14,7 @@ function Specialists() {
         {specialists.map((item) => (
           <div
             key={item.fullname}
+            onClick={() => navigate("44334")}
             className="relative  h-[450px]  cursor-pointer flex items-end  rounded-3xl bg-custom-radial p-[32px]"
           >
             <div className="absolute flex justify-center  z-10 inset-0  ">
