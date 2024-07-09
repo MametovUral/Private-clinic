@@ -11,8 +11,8 @@ function RootLayouts() {
   return (
     <>
       <Navbar />
-      <section className="pt-[160px] bg-[#F9FAFF]">
-        <div className="container">
+      <section className="pt-[168px] pb-24 bg-[#F9FAFF]">
+        <div className="container ">
           {matches.every((item) => item.handle) && <Breadcrumbs />}
         </div>
         <Outlet />

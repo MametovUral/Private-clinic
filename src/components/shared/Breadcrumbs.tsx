@@ -6,7 +6,7 @@ function Breadcrumbs() {
 
   return (
     <div>
-      <ul className="flex gap-2">
+      <ul className="flex gap-2 mb-[56px]">
         {matches.map((match, i) => (
           <li key={i}>
             <Link to={match.pathname}>

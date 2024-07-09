@@ -1,11 +1,12 @@
 import clinic from "@/assets/imgs/clinic.png";
+import AddCounsultation from "@/components/shared/AddCounsultation";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
 function AboutCenter() {
   return (
-    <section className="container mt-[88px]">
-      <div className="pb-9">
+    <section className="container pb-24">
+      <div className="mb-9">
         <div className="flex justify-between items-center">
           <div className="w-[40%]">
             <h3 className="flex flex-col mb-[35px] font-cormorant leading-1 italic font-semibold text-[44px] text-custom-slateGray">
@@ -67,12 +68,15 @@ function AboutCenter() {
           </div>
         </div>
       </div>
-      <div className="pb-9">
+      <div className="mb-9">
         <div>
           <h4 className="font-manrope text-[32px] font-semibold text-custom-slateGray">
             Место для вашей красоты
           </h4>
         </div>
+      </div>
+      <div>
+        <AddCounsultation />
       </div>
     </section>
   );
