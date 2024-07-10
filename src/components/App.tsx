@@ -42,6 +42,9 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <Specialists />,
+            handle: {
+              crumb: () => "",
+            },
           },
           {
             path: ":id",

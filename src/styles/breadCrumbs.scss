@@ -1,0 +1,23 @@
+.breadcrumb-link {
+  cursor: pointer;
+
+  &::after {
+    content: "/";
+    margin: 0 8px;
+    color: #6b7280;
+  }
+  &:last-child {
+    color: #838588;
+    cursor: default;
+  }
+  &:last-of-type::after {
+    content: "";
+  }
+  &:not(:last-child) {
+    
+  }
+
+  &:empty::after {
+    content: "";
+  }
+}

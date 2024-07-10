@@ -14,7 +14,7 @@ function Specialists() {
         {specialists.map((item) => (
           <div
             key={item.fullname}
-            onClick={() => navigate("44334")}
+            onClick={() => navigate("Бекетова Екатерина Николаевна")}
             className="relative  h-[450px]  cursor-pointer flex items-end  rounded-3xl bg-custom-radial p-[32px]"
           >
             <div className="absolute flex justify-center  z-10 inset-0  ">
